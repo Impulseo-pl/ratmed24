@@ -241,3 +241,53 @@ opisane na stronie jako poglądowe. Pexels i Pixabay blokują pobieranie automat
 5. **Godzina graniczna zleceń** na dostawę tego samego dnia.
 6. **Zdjęcia własne** — szkolenia, ambulans, zespół, produkty.
 7. **Wizytówka Google** — bez niej lokalne SEO stoi w miejscu niezależnie od strony.
+
+---
+
+## Wersja 4 — 23.09.2026: SEO techniczne, odchudzenie, nowy projekt
+
+### SEO techniczne
+
+| Co | Jak |
+|---|---|
+| Jeden `H1` na stronę, hierarchia `H2`/`H3` | sprawdzone audytem na wszystkich stronach |
+| Dane strukturalne | `MedicalBusiness` + `WebSite` (główna), `Service`, `Course`, `FAQPage`, `BreadcrumbList`, `CollectionPage` — spięte przez `@id` |
+| Okruszki | widoczne na stronie i w `BreadcrumbList` |
+| Linkowanie wewnętrzne | blok „Zobacz też" z trzema innymi usługami na każdej podstronie |
+| `canonical`, `og:*`, `twitter:card` | na każdej stronie, generowane z jednego miejsca |
+| `robots` | `index, follow, max-image-preview:large`; `noindex` na `404` i `zrodla-zdjec` |
+| `sitemap.xml` | 6 adresów z `lastmod` |
+| Strona 404 | `404.html` z listą wszystkich usług — GitHub Pages podaje ją automatycznie |
+| Wydajność | `preload` + `fetchpriority` na zdjęciu nagłówkowym każdej strony, `loading="lazy"` i `decoding="async"` na pozostałych, `defer` na skrypcie |
+| Dostępność | link „Przejdź do treści", `<main id="tresc">`, `aria-current` w menu, etykiety pól |
+
+**Usunięty zmyślony telefon z danych strukturalnych.** W wersji 3 w `MedicalBusiness` siedział
+placeholder `+48000000000`. Numer w danych strukturalnych musi być prawdziwy — wraca, gdy
+klient poda swój.
+
+### Odchudzenie
+
+- **Arkusz stylów napisany od zera**: 37 kB → 34 kB, ale bez ani jednej martwej klasy.
+  Poprzednia wersja miała 29 reguł po nieistniejących już komponentach (`hero__filary`,
+  `pozycja`, `os__krok`, `przelacznik`…).
+- **Usunięte 9 nieużywanych zdjęć**: katalog `img/` z 2150 kB → **940 kB**.
+- Usunięty pas Battenburg — trzy razy z rzędu wychodził najgłośniejszym elementem strony.
+  Tożsamość ratowniczą niesie logo z gwiazdą życia.
+- Górny pasek przestał dublować menu.
+
+### Nowy projekt wizualny
+
+- **Ciepły papier zamiast zimnej szarości** (`#F6F5F2`) — strona wygląda jak druk, nie jak panel.
+- **Karty bez ramek** — górna krawędź 2 px zamiast pudełka. Dotyczy kafli usług, dowodów,
+  kroków, cennika, FAQ i kontaktu.
+- **Nagłówki sekcji z numerem i linią** biegnącą do końca kolumny, zamiast czerwonej plakietki.
+- **Cyfry tabelaryczne** w cenach, telefonach i wynikach kalkulatora — kolumny się nie ruszają.
+- **Sklep**: kwadratowe kafle produktów na ciepłym tle, przyklejony pasek filtrów,
+  czytelniejszy blok ceny, przycisk „Do koszyka" w wersji obrysowej.
+- Podkreślenia w menu wjeżdżają od lewej, zdjęcia w kaflach lekko się przybliżają przy najechaniu.
+
+### Uwaga o wygenerowanych plikach
+
+Strony powstają z jednego generatora (`szkielet.py` w katalogu roboczym sesji), dlatego
+nagłówek, nawigacja, stopka i pasek telefonu są identyczne wszędzie. Przy ręcznej edycji
+HTML-a trzeba pamiętać, że kolejne przebudowanie nadpisze zmiany.
