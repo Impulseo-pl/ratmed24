@@ -291,3 +291,40 @@ klient poda swój.
 Strony powstają z jednego generatora (`szkielet.py` w katalogu roboczym sesji), dlatego
 nagłówek, nawigacja, stopka i pasek telefonu są identyczne wszędzie. Przy ręcznej edycji
 HTML-a trzeba pamiętać, że kolejne przebudowanie nadpisze zmiany.
+
+---
+
+## Wersja 5 — 28.09.2026: zespół Poland Rescue Team i nowe logo
+
+Źródło: dokument klienta `Poland_Rescue_Team_-_Struktura_Organizacyjna.pdf` (REF: PRT-SOP-2026-01)
+i emblemat `KPP_Special_Response_emblem_logo` + zdjęcie naszywki (`IMG_5011.jpeg`) z Pulpitu.
+
+- **Logo**: emblemat PRT (wycięty do koła, przezroczyste tło) zamiast gwiazdy życia w SVG —
+  nagłówek, stopka, favicona (`img/logo-prt-sm.webp`, `logo-prt-180.png`), dane strukturalne.
+  Podpis pod nazwą: „Poland Rescue Team · KPP”.
+- **Nowa podstrona `zespol.html`**: hierarchia dowodzenia (Dowódca / Starszy Ratownik KPP /
+  Ratownik KPP / Ratownik-Kierowca), łańcuch meldunkowy (podległość, SBAR, briefing/debriefing),
+  standardy (uprawnienia KPP, ŚOI, wyjazd sekcji do 5 min), FAQ, schema `AboutPage` + `Organization`.
+  Pozycja „Zespół” w menu i w stopce, wpis w `sitemap.xml`.
+- **Strona główna**: emblemat nad H1, pasek pod hero („Jeden dowódca na miejscu”, „Wyjazd do 5 minut”),
+  nowa ciemna sekcja 02 „Kto przyjeżdża na miejsce” z czterema rolami i mottem. `MedicalBusiness`
+  dostał `logo` i `subOrganization`.
+- **Zabezpieczenia**: nowy rozdział „Kto dowodzi na miejscu”.
+- Menu chowa się do hamburgera od 1080 px (7 pozycji nie mieściło się z przyciskiem „Zadzwoń”).
+
+Liczba „5 minut” pochodzi z dokumentu klienta, więc wolno ją pokazywać.
+
+Opisy ról, łańcuch meldunkowy i standardy są przepisane **dosłownie z PDF** (decyzja Szymona 28.09).
+Do ustalenia z klientem:
+- „Bazyfikacja” — w polszczyźnie nie ma takiego słowa; propozycja: „kierowanie działaniami”.
+- „Działania w pełnym zakresie Ustawy o PRM” — ratownik KPP nie ma pełnego zakresu ustawy
+  (to ratownik medyczny); propozycja: „w zakresie KPP określonym w ustawie o PRM”.
+
+Do wyjaśnienia z klientem:
+- Relacja nazw: na stronie RatMed24 = firma, Poland Rescue Team = jej zespół ratowniczy.
+  Jeśli PRT ma być główną marką, trzeba zmienić nazwę w nagłówku, tytułach i schemacie.
+- Pozostałe podstrony (szkolenia) mówią o „czynnym ratowniku medycznym”, a zespół to ratownicy KPP —
+  potwierdzić, kto prowadzi szkolenia.
+
+Generator: `szkielet.py` + `str_*.py` w katalogu roboczym sesji
+`...\3647f00a-6b3c-4023-9cef-44f13b316aad\scratchpad\gen\` (nowe: `str_zespol.py`, `str_zrodla2.py`).

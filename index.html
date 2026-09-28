@@ -18,12 +18,13 @@
 <meta property="og:locale" content="pl_PL">
 <meta name="twitter:card" content="summary_large_image">
 
-<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' fill='%23121920'/><g fill='%23C8102E'><rect x='27' y='6' width='10' height='52' rx='5'/><rect x='27' y='6' width='10' height='52' rx='5' transform='rotate(60 32 32)'/><rect x='27' y='6' width='10' height='52' rx='5' transform='rotate(120 32 32)'/></g></svg>">
+<link rel="icon" type="image/webp" href="img/logo-prt-sm.webp">
+<link rel="apple-touch-icon" href="img/logo-prt-180.png">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700&family=Barlow+Condensed:wght@700;800&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/styles.css?v=4">
+<link rel="stylesheet" href="assets/styles.css?v=5">
 <link rel="preload" as="image" href="img/hero-ratownicy.webp" fetchpriority="high">
 <script type="application/ld+json">
 {
@@ -41,6 +42,10 @@
       "image":"https://impulseo-pl.github.io/ratmed24/img/hero-ratownicy.webp",
       "address":{"@type":"PostalAddress","addressCountry":"PL"},
       "areaServed":{"@type":"Country","name":"Polska"},
+      "logo":"https://impulseo-pl.github.io/ratmed24/img/logo-prt.webp",
+      "subOrganization":{"@type":"Organization","@id":"https://impulseo-pl.github.io/ratmed24/#zespol",
+        "name":"Poland Rescue Team - KPP Special Response","slogan":"Secundus ad Neminem",
+        "url":"https://impulseo-pl.github.io/ratmed24/zespol.html"},
       "hasOfferCatalog":{
         "@type":"OfferCatalog","name":"Uslugi RatMed24",
         "itemListElement":[
@@ -90,18 +95,10 @@
 <header class="nawigacja">
   <div class="wrap nawigacja__rzad">
     <a href="index.html" class="logo" aria-label="RatMed24 — strona główna">
-      <svg viewBox="0 0 64 64" aria-hidden="true">
-        <g fill="#C8102E">
-          <rect x="27" y="4" width="10" height="56" rx="5"/>
-          <rect x="27" y="4" width="10" height="56" rx="5" transform="rotate(60 32 32)"/>
-          <rect x="27" y="4" width="10" height="56" rx="5" transform="rotate(120 32 32)"/>
-        </g>
-        <path d="M32 17v30" stroke="#fff" stroke-width="3" stroke-linecap="round"/>
-        <path d="M32 22c4 1.6 4 5.4 0 7s-4 5.4 0 7" stroke="#fff" stroke-width="2.6" fill="none" stroke-linecap="round"/>
-      </svg>
+      <img class="logo__znak" src="img/logo-prt-sm.webp" width="160" height="160" alt="" decoding="async">
       <span>
         <span class="logo__nazwa">Rat<span>Med</span>24</span>
-        <span class="logo__pod">Ratownictwo · Szkolenia · Transport</span>
+        <span class="logo__pod">Poland Rescue Team · KPP</span>
       </span>
     </a>
 
@@ -112,6 +109,7 @@
         <li><a href="transport-medyczny.html">Transport osób</a></li>
         <li><a href="transport-lekow.html">Transport leków</a></li>
         <li><a href="sklep.html">Sklep</a></li>
+        <li><a href="zespol.html">Zespół</a></li>
         <li><a href="index.html#kontakt">Kontakt</a></li>
       </ul>
     </nav>
@@ -131,6 +129,10 @@
 <section class="hero3">
   <div class="wrap hero3__rzad">
     <div>
+      <p class="hero3__jednostka">
+        <img src="img/logo-prt-sm.webp" width="160" height="160" alt="" decoding="async">
+        <span><b>Poland Rescue Team — KPP Special Response</b>zespół ratowniczy RatMed24</span>
+      </p>
       <h1>Ratownicy, szkolenia i sprzęt pod jednym numerem</h1>
       <p class="hero3__lead">
         Szkolimy pracowników z pierwszej pomocy, zabezpieczamy imprezy, wozimy pacjentów
@@ -142,8 +144,8 @@
         <a class="guzik guzik--obrys guzik--duzy" href="#kontakt">Poproś o wycenę</a>
       </div>
       <div class="hero3__pod">
-        <span><b>Uprawnieni ratownicy</b>czynni zawodowo, nie wykładowcy</span>
-        <span><b>Wycena na konkret</b>skład i cena, nie „od–do”</span>
+        <span><b>Jeden dowódca na miejscu</b>i stały podział ról w zespole</span>
+        <span><b>Wyjazd do 5 minut</b>od sygnału alarmowego</span>
         <span><b>Faktura dla instytucji</b>także z odroczonym terminem płatności</span>
       </div>
     </div>
@@ -217,12 +219,60 @@
   </div>
 </section>
 
+<!-- ======================= ZESPÓŁ ======================= -->
+<section class="sekcja sekcja--ciemna" id="zespol">
+  <div class="wrap">
+    <div class="naglowek">
+      <span class="nad nad--jasny" data-nr="02">Zespół</span>
+      <h2>Hierarchia dowodzenia i funkcje operacyjne</h2>
+      <p class="olowek">
+        Zespół Poland Rescue Team — KPP Special Response ma stałą strukturę dowodzenia.
+        Każdy ratownik odpowiada przed jednym dowódcą, a role są podzielone przed wyjazdem.
+      </p>
+    </div>
+    <div class="etaty">
+      <div class="etat etat--dowodca">
+        <span class="etat__poziom">COMMAND</span>
+        <h3>Dowódca Zespołu</h3>
+        <span class="etat__en">Team Leader</span>
+        <ul><li>Bazyfikacja i koordynacja taktyczna na miejscu zdarzenia.</li><li>Łączność i współdziałanie z ZRM, PSP, Policją i WOPR/GOPR.</li><li>Podejmowanie decyzji o dyslokacji i zakończeniu działań.</li></ul>
+      </div>
+      <div class="etat">
+        <span class="etat__poziom">SENIOR SPEC.</span>
+        <h3>Starszy Ratownik KPP</h3>
+        <span class="etat__en">Senior Specialist</span>
+        <ul><li>Prowadzenie segregacji medycznej (Triage START / JumpSTART).</li><li>Nadzór nad sprzętem medycznym (AED, zestaw R1, tlenoterapia).</li><li>Zastępowanie Dowódcy Zespołu podczas jego nieobecności.</li></ul>
+      </div>
+      <div class="etat">
+        <span class="etat__poziom">SPECIALIST</span>
+        <h3>Ratownik KPP</h3>
+        <span class="etat__en">Specialist</span>
+        <ul><li>Realizacja procedur Kwalifikowanej Pierwszej Pomocy.</li><li>Resuscytacja krążeniowo-oddechowa, tamowanie masywnych krwotoków.</li><li>Unieruchamianie złamań, opatrywanie ran i ochrona termiczna.</li></ul>
+      </div>
+      <div class="etat">
+        <span class="etat__poziom">SUPPORT</span>
+        <h3>Ratownik / Kierowca</h3>
+        <span class="etat__en">Support / Driver</span>
+        <ul><li>Bezpieczny transport zespołu i obsługa pojazdu ratowniczego.</li><li>Zabezpieczenie terenu akcji i koordynacja radiowa.</li><li>Wsparcie techniczne oraz logistyczne na miejscu zdarzenia.</li></ul>
+      </div>
+    </div>
+    <div class="zespol-motto">
+      <img src="img/logo-prt-sm.webp" width="160" height="160" alt="Emblemat Poland Rescue Team" loading="lazy" decoding="async">
+      <p>
+        <b><i>Secundus ad Neminem</i></b> — „drugi po nikim”. Meldunki SBAR przy przekazaniu
+        poszkodowanego do ZRM, odprawa przed wyjazdem i omówienie akcji po jej zakończeniu.
+        <a href="zespol.html">Pełna struktura zespołu →</a>
+      </p>
+    </div>
+  </div>
+</section>
+
 <!-- ======================= KIEDY DO NAS, KIEDY 112 ======================= -->
 <section class="sekcja sekcja--tlo">
   <div class="wrap">
     <div class="dwie">
       <div>
-        <span class="nad" data-nr="02">Ważne rozróżnienie</span>
+        <span class="nad" data-nr="03">Ważne rozróżnienie</span>
         <h2>Kiedy dzwonić do nas, a kiedy na 112</h2>
         <p class="olowek">
           Nie jesteśmy pogotowiem ratunkowym i nie zastępujemy numeru alarmowego.
@@ -249,7 +299,7 @@
 <section class="sekcja">
   <div class="wrap">
     <div class="naglowek">
-      <span class="nad" data-nr="03">Na czym stoimy</span>
+      <span class="nad" data-nr="04">Na czym stoimy</span>
       <h2>Co możesz sprawdzić przed podpisaniem</h2>
     </div>
     <div class="dowody">
@@ -276,7 +326,7 @@
 <section class="sekcja sekcja--tlo">
   <div class="wrap">
     <div class="naglowek">
-      <span class="nad" data-nr="04">Współpraca</span>
+      <span class="nad" data-nr="05">Współpraca</span>
       <h2>Jak wygląda zamówienie</h2>
     </div>
     <div class="kroki">
@@ -304,7 +354,7 @@
 <section class="sekcja">
   <div class="wrap">
     <div class="naglowek">
-      <span class="nad" data-nr="05">Teren</span>
+      <span class="nad" data-nr="06">Teren</span>
       <h2>Gdzie dojeżdżamy</h2>
       <p class="olowek">
         Szkolenia i zabezpieczenia realizujemy z dojazdem do siedziby klienta. Transport pacjentów
@@ -326,7 +376,7 @@
   <div class="wrap">
     <div class="dwie dwie--odwrotnie">
       <div>
-        <span class="nad nad--jasny" data-nr="06">Sklep</span>
+        <span class="nad nad--jasny" data-nr="07">Sklep</span>
         <h2>Sprzęt, na którym sami pracujemy</h2>
         <p class="olowek">
           Apteczki zakładowe, torby i plecaki ratownicze, defibrylatory, unieruchomienia i odzież.
@@ -350,7 +400,7 @@
 <section class="sekcja">
   <div class="wrap">
     <div class="naglowek">
-      <span class="nad" data-nr="07">Pytania</span>
+      <span class="nad" data-nr="08">Pytania</span>
       <h2>Najczęstsze pytania</h2>
     </div>
     <div class="faq">
@@ -412,7 +462,7 @@
 <section class="sekcja sekcja--tlo" id="kontakt">
   <div class="wrap">
     <div class="naglowek">
-      <span class="nad" data-nr="08">Kontakt</span>
+      <span class="nad" data-nr="09">Kontakt</span>
       <h2>Powiedz, co i na kiedy</h2>
       <p class="olowek">
         Najszybciej przez telefon. Jeżeli wolisz napisać — wypełnij formularz, oddzwonimy
@@ -496,17 +546,10 @@
   <div class="wrap stopka__rzad">
     <div>
       <div class="stopka__logo">
-        <svg viewBox="0 0 64 64" aria-hidden="true">
-        <g fill="#C8102E">
-          <rect x="27" y="4" width="10" height="56" rx="5"/>
-          <rect x="27" y="4" width="10" height="56" rx="5" transform="rotate(60 32 32)"/>
-          <rect x="27" y="4" width="10" height="56" rx="5" transform="rotate(120 32 32)"/>
-        </g>
-        <path d="M32 17v30" stroke="#fff" stroke-width="3" stroke-linecap="round"/>
-        <path d="M32 22c4 1.6 4 5.4 0 7s-4 5.4 0 7" stroke="#fff" stroke-width="2.6" fill="none" stroke-linecap="round"/>
-      </svg>
+        <img class="stopka__znak" src="img/logo-prt-sm.webp" width="160" height="160" alt="Emblemat Poland Rescue Team — KPP Special Response" loading="lazy" decoding="async">
         <span class="logo__nazwa">Rat<span>Med</span>24</span>
       </div>
+      <p class="stopka__jednostka">Poland Rescue Team — KPP Special Response<br><i>Secundus ad Neminem</i></p>
       <p style="max-width:40ch">
         Szkolenia pierwszej pomocy, zabezpieczenia medyczne, transport pacjentów
         i ekspresowy przewóz leków. Sklep ze sprzętem ratowniczym.
@@ -520,6 +563,7 @@
         <li><a href="zabezpieczenie-medyczne-imprez.html">Zabezpieczenie imprez</a></li>
         <li><a href="transport-medyczny.html">Transport medyczny</a></li>
         <li><a href="transport-lekow.html">Transport leków</a></li>
+        <li><a href="zespol.html">Zespół i struktura</a></li>
       </ul>
     </div>
     <div>
@@ -551,6 +595,6 @@
   <a href="index.html#kontakt">Napisz</a>
 </div>
 
-<script src="assets/app.js?v=4" defer></script>
+<script src="assets/app.js?v=5" defer></script>
 </body>
 </html>

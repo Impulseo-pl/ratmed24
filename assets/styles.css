@@ -129,7 +129,7 @@ p:last-child{ margin-bottom:0; }
 .nawigacja__rzad{ display:flex; align-items:center; gap:18px; height:74px; }
 
 .logo{ display:flex; align-items:center; gap:11px; text-decoration:none; flex:none; }
-.logo svg{ width:38px; height:38px; flex:none; }
+.logo__znak{ width:54px; height:54px; flex:none; display:block; }
 .logo__nazwa{
   font-family:'Barlow Condensed',sans-serif; font-weight:800; font-size:26px;
   letter-spacing:-.015em; color:var(--atrament); text-transform:uppercase; line-height:1;
@@ -646,7 +646,9 @@ p:last-child{ margin-bottom:0; }
 .stopka a{ text-decoration:none; }
 .stopka a:hover{ color:#fff; }
 .stopka__logo{ display:flex; align-items:center; gap:11px; margin-bottom:18px; }
-.stopka__logo svg{ width:36px; height:36px; }
+.stopka__znak{ width:84px; height:84px; flex:none; display:block; }
+.stopka__jednostka{ font-size:13.5px; color:#9AA8B5; margin:-4px 0 14px; line-height:1.5; }
+.stopka__jednostka i{ color:#fff; font-style:italic; }
 .stopka__logo .logo__nazwa{ color:#fff; }
 .stopka__dol{
   border-top:1px solid rgba(255,255,255,.14); padding:18px 0; display:flex;
@@ -655,6 +657,57 @@ p:last-child{ margin-bottom:0; }
 .stopka__dol a{ color:#fff; }
 
 .pasek-tel{ display:none; }
+
+/* --------------------------------------------------------------------------
+   15. ZESPÓŁ — POLAND RESCUE TEAM
+   -------------------------------------------------------------------------- */
+.hero3__jednostka{
+  display:flex; align-items:center; gap:12px; margin:0 0 20px;
+  font-size:14.5px; color:var(--stal); line-height:1.35;
+}
+.hero3__jednostka img{ width:46px; height:46px; flex:none; }
+.hero3__jednostka b{ display:block; color:var(--atrament); font-size:15.5px; }
+
+.etaty{ display:grid; grid-template-columns:repeat(4,1fr); gap:24px; }
+.etat{ border-top:2px solid var(--atrament); padding-top:18px; }
+.etat--dowodca{ border-top-color:var(--czerwien); }
+.etat__poziom{
+  display:block; font-family:'IBM Plex Mono',monospace; font-size:11px;
+  letter-spacing:.1em; color:var(--stal); margin-bottom:10px;
+}
+.etat h3{ font-size:20px; margin:0 0 2px; }
+.etat__en{ display:block; font-size:13.5px; color:var(--stal); margin-bottom:12px; }
+.etat ul{ margin:0; padding-left:18px; font-size:15px; color:var(--tekst); line-height:1.5; }
+.etat li + li{ margin-top:6px; }
+
+.zespol-motto{
+  display:flex; align-items:center; gap:22px; margin-top:44px; padding-top:26px;
+  border-top:1px solid var(--kreska);
+}
+.zespol-motto img{ width:96px; height:96px; flex:none; }
+.zespol-motto p{ margin:0; color:var(--stal); max-width:62ch; }
+.zespol-motto b{ color:var(--atrament); }
+
+.sekcja--ciemna .etat{ border-top-color:rgba(255,255,255,.28); }
+.sekcja--ciemna .etat--dowodca{ border-top-color:var(--czerwien); }
+.sekcja--ciemna .etat__poziom,.sekcja--ciemna .etat__en{ color:var(--stal-2); }
+.sekcja--ciemna .etat ul{ color:#C4CED8; }
+.sekcja--ciemna .zespol-motto{ border-top-color:rgba(255,255,255,.16); }
+.sekcja--ciemna .zespol-motto p{ color:#C4CED8; }
+.sekcja--ciemna .zespol-motto b{ color:#fff; }
+.sekcja--ciemna .zespol-motto a{ color:#fff; }
+
+.emblemat{ margin:0; display:grid; place-items:center; background:var(--papier); padding:clamp(24px,4vw,48px); }
+.emblemat img{ width:min(100%,420px); height:auto; display:block; }
+
+@media (max-width:1080px){
+  .etaty{ grid-template-columns:repeat(2,1fr); gap:30px 24px; }
+}
+@media (max-width:660px){
+  .etaty{ grid-template-columns:1fr; }
+  .zespol-motto{ flex-direction:column; align-items:flex-start; }
+  .logo__znak{ width:46px; height:46px; }
+}
 
 /* --------------------------------------------------------------------------
    14. RESPONSYWNOŚĆ
@@ -669,7 +722,7 @@ p:last-child{ margin-bottom:0; }
   .dalej{ grid-template-columns:1fr; gap:0; }
   .dalej a{ padding-bottom:16px; }
 }
-@media (max-width:900px){
+@media (max-width:1080px){
   .menu{ display:none; }
   .menu[data-otwarte="1"]{
     display:flex; flex-direction:column; position:absolute; top:74px; left:0; right:0;
@@ -679,6 +732,8 @@ p:last-child{ margin-bottom:0; }
   .menu[data-otwarte="1"] a{ padding:14px 8px; border-bottom:1px solid var(--kreska); }
   .menu[data-otwarte="1"] a::after{ display:none; }
   .hamburger{ display:flex; }
+}
+@media (max-width:900px){
   .nawigacja__akcja a.guzik--czerwony{ display:none; }
   .hero3__rzad{ grid-template-columns:1fr; gap:34px; }
   .dwie{ grid-template-columns:1fr; }
